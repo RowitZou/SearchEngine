@@ -50,7 +50,7 @@ public class ICTCLASTokenizer extends Tokenizer {
 	}
 
 	@Override
-	public boolean incrementToken() {// 得到下一次词
+	public boolean incrementToken() {//寰楀埌涓嬩竴涓瘝
 		clearAttributes();
 		if (tokenIter.hasNext()) {
 			String tokenstr = tokenIter.next();

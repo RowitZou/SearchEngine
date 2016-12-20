@@ -25,7 +25,7 @@ public class Searcher {
 	}
 
 	/*
-	 * ²éÑ¯Ë÷Òý
+	 * æŸ¥è¯¢ç´¢å¼•
 	 */
 	public void searchIndex(String querystr) {
 		searchIndex = querystr;

@@ -14,7 +14,7 @@ public class ICTCLASAnalyzer extends Analyzer {
 
 		String initPath = "G:\\javawork32\\SearchEngine";
 
-		// ³õÊ¼»¯NLPIR
+		//åˆå§‹åŒ–NLPIR
 		if (NLPIR.NLPIR_Init(initPath.getBytes("GB2312"), 0) == false) {
 			System.out.println("Init Fail!");
 			return;

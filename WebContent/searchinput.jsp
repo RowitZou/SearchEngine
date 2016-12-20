@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=GB2312"
-	pageEncoding="GB2312"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=GB2312">
-<title>´óÐÂÎÅ</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>å¤§æ–°é—»</title>
 </head>
 <body>
 	<br>
@@ -13,7 +13,7 @@
 	<br>
 	<br>
 	<p align="center">
-		<img src=".\\news.jpg" alt="´óÐÂÎÅ"
+		<img src=".\\news.jpg" alt="å¤§æ–°é—»"
 			width="350">
 	<form method="POST" action="searchResult.jsp?newindex=1&page=1">
 		<br>
@@ -25,7 +25,7 @@
 	<br>
 	<br>
 	<p align="center">
-		<font size="4" color="black">PB14011009 ×ÞÒ×³Î</font>
+		<font size="4" color="black">PB14011009 é‚¹æ˜“æ¾„</font>
 	</p>
 
 </body>

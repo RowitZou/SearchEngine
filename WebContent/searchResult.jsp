@@ -1,34 +1,34 @@
-<%@ page language="java" contentType="text/html; charset=GB2312"
-	pageEncoding="GB2312" import="se.Searcher"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" import="se.Searcher"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=GB2312">
-<title>´óĞÂÎÅ</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>å¤§æ–°é—»</title>
 </head>
 <body>
-	<%!String searchText = "ĞÂÀË";%>
+	<%!String searchText = "æ–°æµª";%>
 	<%!Integer currPage = 1;%>
 	<%!String newIndex = "0";%>
 	<%
-		request.setCharacterEncoding("GB2312");
+		request.setCharacterEncoding("UTF-8");
 		newIndex = request.getParameter("newindex");
 		if (newIndex.equals("1"))
 			searchText = request.getParameter("Index");
 		else
 			searchText = Searcher.searchIndex;
 		if (request.getParameter("page") == null)
-			out.println("Ò³Ãæ·¢Éú´íÎó");
+			out.println("é¡µé¢å‘ç”Ÿé”™è¯¯");
 		else
 			currPage = Integer.parseInt(request.getParameter("page"));
 	%>
-	<img src=".\\news.jpg" alt="´óĞÂÎÅ" width="300"><br>
+	<img src=".\\news.jpg" alt="å¤§æ–°é—»" width="300"><br>
 	<form method="POST" action="searchResult.jsp?newindex=1&page=1">
 		<p align="left">
 			<input type="text" name="Index" size="35"
 				value=<%out.print("\"" + searchText + "\"");%>> <input
 				type="submit" value="Search"> <a href="searchinput.jsp"><font
-				color="blue">·µ»ØÊ×Ò³</font></a> <br> <br>
+				color="blue">è¿”å›é¦–é¡µ</font></a> <br> <br>
 	</form>
 
 	<%
@@ -39,11 +39,11 @@
 				searcher.searchIndex(searchText);
 
 				if (Searcher.hits == 10000)
-					out.println("<font color=\"green\" size=\"2\">¹²ÓĞ¶àÓÚ"
-							+ Searcher.hits + "ÌõËÑË÷½á¹û</font><br><br>");
+					out.println("<font color=\"green\" size=\"2\">å…±æœ‰å¤šäº"
+							+ Searcher.hits + "æ¡æœç´¢ç»“æœ</font><br><br>");
 				else
-					out.println("<font color=\"green\" size=\"2\">¹²ÓĞ"
-							+ Searcher.hits + "ÌõËÑË÷½á¹û</font><br><br>");
+					out.println("<font color=\"green\" size=\"2\">å…±æœ‰"
+							+ Searcher.hits + "æ¡æœç´¢ç»“æœ</font><br><br>");
 				if (Searcher.hits > 0) {
 					int min = (Searcher.hits > ((currPage - 1) * 20 + 20)) ? ((currPage - 1) * 20 + 20)
 							: Searcher.hits;
@@ -83,18 +83,18 @@
 						out.println("<br><br><br>");
 					}
 				} else {
-					out.println("<br></font color = \"black\" size = \"5\">Ã»ÓĞÕÒµ½Æ¥ÅäÄÚÈİ<br>");
+					out.println("<br></font color = \"black\" size = \"5\">æ²¡æœ‰æ‰¾åˆ°åŒ¹é…å†…å®¹<br>");
 				}
 			} else {
-				out.println("<br></font color = \"black\" size = \"5\">ÇëÖØĞÂÊäÈë<br>");
+				out.println("<br></font color = \"black\" size = \"5\">è¯·é‡æ–°è¾“å…¥<br>");
 			}
 		} else {
 			if (Searcher.hits == 10000)
-				out.println("<font color=\"green\" size=\"2\">¹²ÓĞ¶àÓÚ"
-						+ Searcher.hits + "ÌõËÑË÷½á¹û</font><br><br>");
+				out.println("<font color=\"green\" size=\"2\">å…±æœ‰å¤šäº"
+						+ Searcher.hits + "æ¡æœç´¢ç»“æœ</font><br><br>");
 			else
-				out.println("<font color=\"green\" size=\"2\">¹²ÓĞ"
-						+ Searcher.hits + "ÌõËÑË÷½á¹û</font><br><br>");
+				out.println("<font color=\"green\" size=\"2\">å…±æœ‰"
+						+ Searcher.hits + "æ¡æœç´¢ç»“æœ</font><br><br>");
 			if (Searcher.hits > 0) {
 				int min = (Searcher.hits > ((currPage - 1) * 20 + 20)) ? ((currPage - 1) * 20 + 20)
 						: Searcher.hits;
@@ -135,35 +135,35 @@
 					out.println("<br><br><br>");
 				}
 			} else {
-				out.println("<br></font color = \"black\" size = \"5\">Ã»ÓĞÕÒµ½Æ¥ÅäÄÚÈİ<br>");
+				out.println("<br></font color = \"black\" size = \"5\">æ²¡æœ‰æ‰¾åˆ°åŒ¹é…å†…å®¹<br>");
 			}
 		}
 	%>
 	<%
 		out.println("<p align=\"center\">");
-		out.println("µ±Ç°ÊÇµÚ " + currPage + " Ò³<br><br>");
-		out.println("<a href=\"searchResult.jsp?newindex=0&page=0\">Ê×Ò³</a>");
+		out.println("å½“å‰æ˜¯ç¬¬ " + currPage + " é¡µ<br><br>");
+		out.println("<a href=\"searchResult.jsp?newindex=0&page=0\">é¦–é¡µ</a>");
 		if (currPage == 1)
-			out.println("ÉÏÒ»Ò³");
+			out.println("ä¸Šä¸€é¡µ");
 		else
 			out.println("<a href=\"searchResult.jsp?newindex=0&page="
-					+ (currPage - 1) + "\">ÉÏÒ»Ò³</a>");
+					+ (currPage - 1) + "\">ä¸Šä¸€é¡µ</a>");
 		if (20 * currPage >= Searcher.hits)
-			out.println("ÏÂÒ»Ò³");
+			out.println("ä¸‹ä¸€é¡µ");
 		else
 			out.println("<a href=\"searchResult.jsp?newindex=0&page="
-					+ (currPage + 1) + "\">ÏÂÒ»Ò³</a>");
+					+ (currPage + 1) + "\">ä¸‹ä¸€é¡µ</a>");
 		if (Searcher.hits % 20 == 0)
 			out.println("<a href=\"searchResult.jsp?newindex=0&page="
-					+ (Searcher.hits / 20) + "\">Î²Ò³</a>");
+					+ (Searcher.hits / 20) + "\">å°¾é¡µ</a>");
 		else
 			out.println("<a href=\"searchResult.jsp?newindex=0&page="
-					+ (Searcher.hits / 20 + 1) + "\">Î²Ò³</a>");
+					+ (Searcher.hits / 20 + 1) + "\">å°¾é¡µ</a>");
 		out.println("</p>");
 	%>
 	<form method="POST" action="searchResult.jsp?newindex=0">
-		<p align="center">ÌøÖÁ
-			<input type="text" name="page" size="5" value=0>Ò³ <input
+		<p align="center">è·³è‡³
+			<input type="text" name="page" size="5" value=0>é¡µ <input
 				type="submit" value="Go"> <br>
 	</form>
 </body>
